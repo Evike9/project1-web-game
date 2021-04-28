@@ -13,24 +13,34 @@
     ></script>
   </head>
   <body>
-    <nav>
+    
       <div>
-        <h3>fun game - bring it on!!!</h3>
+        <!--<h3>fun game - bring it on!!!</h3>-->
       </div>
+    <nav>
+      <div class="neon-wrapper">
+        <span class="txt">ROCKET HUNT</span>
+        <span class="gradient"></span>
+        <span class="dodge"></span>
+      </div>
+      <h1></h1>
     </nav>
-    <header>
-      <h1>ROCKET HUNT</h1>
-    </header>
 
     <div class="container">
-      <button class="start-btn">START</button>
-      <!-- SPACE LIFE-->
-      <div class="space-life">
-        <ul class="astronaut">
+      <!-- SPACE LIVES-->
+
+      <div class="astro">
+        <div>
+          <p class="space-lives">SPACE LIVES</p>
           <span class="fas fa-user-astronaut"></span>
           <span class="fas fa-user-astronaut"></span>
           <span class="fas fa-user-astronaut"></span>
-        </ul>
+          <span class="fas fa-user-astronaut"></span>
+        </div>
+      </div>
+
+      <div>
+        <button class="start-btn">START</button>
       </div>
 
       <!-- GRID-->
@@ -54,8 +64,7 @@
       </div>
 
       <!-- ROCKET check JS-->
-
-      
+      <canvas id="canvas" width="150" height="150"></canvas>
 
       <!--<div class="timer"></div> -->
 

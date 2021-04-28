@@ -17,6 +17,14 @@ let board = document.getElementById("game-board");
 const astro = document.querySelectorAll(".fas fa-user-astronaut");
 //let windowbtn = document.querySelectorAll(".window");
 
+
+
+function draw(){
+ const rock = document.getElementById("canvas")
+}
+
+
+
 function moveRocketRandomly() {
   const number = Math.floor(Math.random() * 15); // choisir un num entre 0 et 15
   const randomWindow = windows[number]; // pick une window avec number
@@ -46,7 +54,7 @@ function windowclicked(event) {
 }
 
 function start(event) {
-  applyCSSAnimationToCardRandomly();
+  applyCSSAnimationToCardRandomly()
   moveRocketRandomly(); 
 }
 
