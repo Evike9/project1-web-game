@@ -1,0 +1,137 @@
+body {
+  background-color: rgb(42, 39, 134);
+}
+
+h1 {
+  text-align: center;
+  color: rgb(93, 46, 174);
+  font-size: 50px;
+}
+
+h3 {
+  text-align: center;
+  color: rgb(93, 46, 174);
+}
+
+.start-btn {
+  padding: 20px;
+  margin: 50px 90px 20px 20px;
+  text-align: center;
+  position: relative;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  min-width: 400px;
+  height: 400px;
+}
+
+.board.done {
+  cursor: default;
+}
+
+.rocket {
+  position: absolute;
+  width: 5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border: 1px solid cyan;
+  background-color: rgb(80, 83, 215);
+  align-items: center;
+  border-radius: 5%;
+}
+
+.window.window1 {
+  animation: color-me-in1 6s;
+}
+
+.window2 {
+  animation: color-me-in2 6s;
+}
+
+.window3 {
+  animation: color-me-in3 6s;
+}
+
+.window4 {
+  animation: color-me-in3 6s;
+}
+
+/* animation shuffle colors swap*/
+
+@keyframes color-me-in1 {
+  0% {
+    background: rgb(80, 83, 215);
+  }
+
+  40% {
+    background: rgb(54, 123, 34);
+  }
+
+  100% {
+    background: rgb(191, 29, 255);
+  }
+}
+
+@keyframes color-me-in2 {
+  0% {
+    background: rgb(80, 83, 215);
+  }
+
+  50% {
+    background: rgb(111, 111, 241);
+  }
+
+  90% {
+    background: rgb(88, 238, 255);
+  }
+}
+
+@keyframes color-me-in3 {
+  0% {
+    background: rgb(80, 83, 215);
+  }
+
+  5% {
+    background: rgb(2, 156, 164);
+  }
+
+  100% {
+    background: rgb(39, 39, 166);
+  }
+}
+
+@keyframes color-me-in4 {
+  0% {
+    background: rgb(80, 83, 215);
+  }
+
+  10% {
+    background: rgb(232, 132, 247);
+  }
+
+  100% {
+    background: rgb(39, 39, 166);
+  }
+}
+
+
+.fa-user-astronaut {
+  color: aqua;
+  width: 300%;
+}
