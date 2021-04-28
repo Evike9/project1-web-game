@@ -47,14 +47,14 @@ function windowclicked(event) {
 
 function start(event) {
   applyCSSAnimationToCardRandomly();
-  moveRocketRandomly();
+  moveRocketRandomly(); 
 }
 
 startbtn.addEventListener("click", start);
 console.log(startbtn);
 
-windows.addEventListener("click", windowclicked);
-console.log(windows);
+//windows.addEventListener("click", windowclicked);
+//console.log(windows);
 
 // loop to add event listeners to each windows
 
