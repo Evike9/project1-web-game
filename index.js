@@ -17,13 +17,9 @@ let board = document.getElementById("game-board");
 const astro = document.querySelectorAll(".fas fa-user-astronaut");
 //let windowbtn = document.querySelectorAll(".window");
 
-
-
-function draw(){
- const rock = document.getElementById("canvas")
+function draw() {
+  const rock = document.getElementById("canvas");
 }
-
-
 
 function moveRocketRandomly() {
   const number = Math.floor(Math.random() * 15); // choisir un num entre 0 et 15
@@ -50,12 +46,12 @@ function applyCSSAnimationToCardRandomly() {
 }
 
 function windowclicked(event) {
- // action: if player click sur une des case/window : condition soit le rocket apparait else n'apparait pas
+  // action: if player click sur une des case/window : condition soit le rocket apparait else n'apparait pas
 }
 
 function start(event) {
-  applyCSSAnimationToCardRandomly()
-  moveRocketRandomly(); 
+  applyCSSAnimationToCardRandomly();
+  moveRocketRandomly();
 }
 
 startbtn.addEventListener("click", start);

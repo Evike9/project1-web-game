@@ -1,26 +1,18 @@
-*{
-  font-family:monospace;
+* {
+  font-family: monospace;
 }
-
 
 body {
   background-color: #000000;
 }
 
-/*h1 {
-  text-align: center;
-  color: rgb(52, 234, 254);
-  font-size: 60px;
-  position: relative;
-}*/
-
 /*ROCKET HUNT*/
 .txt {
-  color:rgb(10, 225, 249);
-  font-size:60px;
+  color: rgb(10, 225, 249);
+  font-size: 60px;
   font-weight: bold;
-  text-transform: uppercase; 
-  background: #000000; 
+  text-transform: uppercase;
+  background: #000000;
 }
 .txt::before {
   content: "ROCKET HUNT";
@@ -33,32 +25,37 @@ body {
   top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display:inline-flexbox;
+  display: inline-flexbox;
   filter: brightness(300%);
   overflow: hidden;
 }
-.gradient{
-  background: linear-gradient(114.5793141156962deg, rgba(6, 227, 250,1) 4.927083333333334%,rgba(229, 151, 64,1) 97.84374999999999%);
+.gradient {
+  background: linear-gradient(
+    114.5793141156962deg,
+    rgba(6, 227, 250, 1) 4.927083333333334%,
+    rgba(229, 151, 64, 1) 97.84374999999999%
+  );
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
   mix-blend-mode: multiply;
 }
 .dodge {
-  background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+  background: radial-gradient(circle, white, black 35%) center / 25% 25%;
   position: absolute;
-  top:-100%;
-  left:-100%;
-  right:0;
-  bottom:0;
+  top: -100%;
+  left: -100%;
+  right: 0;
+  bottom: 0;
   mix-blend-mode: color-dodge;
   animation: dodge-area 3s linear infinite;
 }
+
 @keyframes dodge-area {
   to {
-      transform: translate(50%,50%);
+    transform: translate(50%, 50%);
   }
 }
 
@@ -68,19 +65,16 @@ h3 {
 }
 
 .start-btn {
-  color: rgb(57, 57, 159);
-  font-weight:bold;
-  font-size: 30px;
-  background-color:rgb(88, 238, 255);
-  border: 2px solid rgb(111, 111, 241);
+  color: rgb(80, 83, 215);
+  font-size: 20px;
+  background-color: rgb(46, 234, 244);
+  border: 2px solid rgb(46, 234, 244);
   border-radius: 5%;
-  margin:10px;
-  animation: shake 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) both; 
+  margin: 10px;
+  animation: shake 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
-
-
-.astro{
+.astro {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -89,12 +83,11 @@ h3 {
   display: hidden;
 }
 
-.space-lives{
-  color: aqua;
+.space-lives {
+  color: rgb(91, 214, 214);
   text-align: center;
   font-size: 15px;
   margin-top: 20%;
-  
 }
 
 .fa-user-astronaut {
@@ -103,7 +96,6 @@ h3 {
   justify-content: space-around;
   font-size: 150%;
   margin: 15px;
-  
 }
 
 #game-board {
@@ -143,19 +135,19 @@ h3 {
 }
 
 .window.window1 {
-  animation: color-me-in1 6s infinite ;
+  animation: color-me-in1;
 }
 
 .window2 {
-  animation: color-me-in2 6s infinite ;
+  animation: color-me-in2;
 }
 
 .window3 {
-  animation: color-me-in3 6s infinite;
+  animation: color-me-in3;
 }
 
 .window4 {
-  animation: color-me-in3 6s infinite;
+  animation: color-me-in3;
 }
 
 /* animation shuffle colors swap*/
@@ -215,6 +207,3 @@ h3 {
     background: rgb(33, 33, 169);
   }
 }
-
-
-
