@@ -1,3 +1,3 @@
-# project1-web-game -ROCKET HUNT-
+-ROCKET HUNT-
 
 Have fun looking forward to hunt the rocket!! 
