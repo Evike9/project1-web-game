@@ -15,7 +15,7 @@ let windows = document.querySelectorAll(".window");
 let startbtn = document.querySelector(".start-btn");
 let board = document.getElementById("game-board");
 const astro = document.querySelectorAll(".fas fa-user-astronaut");
-//let windowbtn = document.querySelectorAll(".window");
+//let audio = document.getElementById("sound");
 
 function draw() {
   const rock = document.getElementById("canvas");
@@ -31,9 +31,9 @@ function moveRocketRandomly() {
   // (re)créer une image en HTML avec le gif de la rocket
   const rocket = document.createElement("img");
   rocket.className = "rocket";
-  rocket.src = "./img/rocket.gif";
+  rocket.src = "./img/rockit.gif";
   randomWindow.appendChild(rocket);
-  console.log(randomWindow);
+  //console.log(randomWindow);
 }
 
 function applyCSSAnimationToCardRandomly() {
@@ -45,56 +45,40 @@ function applyCSSAnimationToCardRandomly() {
   });
 }
 
-function windowclicked(event) {
+/*function windowclicked(event) {
   // action: if player click sur une des case/window : condition soit le rocket apparait else n'apparait pas
-}
+}*/
 
 function start(event) {
-  applyCSSAnimationToCardRandomly();
-  moveRocketRandomly();
+  //moveRocketRandomly();
+  //console.log("yo");
 }
 
+function checkClick(event) {
+  if (event.target.children.length) {
+    console.log("yay");
+    moveRocketRandomly();
+  } else {
+    alert("try again");
+  }
+}
+
+function audio() {}
+
+windows.forEach((oneWindow) => {
+  oneWindow.addEventListener("click", (e) => checkClick(e));
+});
+
+applyCSSAnimationToCardRandomly();
 startbtn.addEventListener("click", start);
 console.log(startbtn);
 
-//windows.addEventListener("click", windowclicked);
-//console.log(windows);
+//sound.addEventListener("click", audio);
+//console.log(sound);
 
-// loop to add event listeners to each windows
 
-// action if Player hits START btn then the colors changes kicks off
-/*const startBtn = document.getElementById("start-btn");
-const showboardColors = document.querySelectorAll(".board div");
-/*console.log(board)*/
 
-/*const handleBoard = (foo) => {
-  foo.classlist.toggle("board")
-}*/
-/*console.log(showboardColors);*/
-
-/*showboardColors.forEach((board) => {
-  board.addEventListener("click", (e) => handleBoard(board))
-})*/
-
-/*const revealBoard = () => {
-  board.classList.toggle("hidden")
-}
-
-startBtn.addEventListener("click", revealBoard)*/
-
-/*.document.querySelector().addEventlistener(‘click, ())*/
-
-//ACTION 2 - CLICK BUTTON : player click on the button of the space board:
-
-/*let clickedBoard = null;
-function onRocketClicked(e) {
-  const target = e.currentTarget;
-  if (target === clickedBoard ||  target.className.includes(" done")){
-    return; 
-  }
-//  console.log(target.querySelectorAll);
-
-  target.className = target.className.replace("board", "rocket").trim();
+  /*target.className = target.className.replace("board", "rocket").trim();
   target.className += " done";
 
   console.log(target.getAttribute("rocket"));
@@ -113,22 +97,10 @@ function onRocketClicked(e) {
         target.className.replace(" done", "rocket").trim();
       }, 500);
     }
-  }
-}*/
-
-/*test -> let beforeRocket = document.querySelectorAll("rocket");
-  //I create let = beforeRocket as console keeps on saying beforeRocketPops is not defined on HTML element onClick arghhhhh
-  /*console.log(beforeRocketPops);*/
-/*document.querySelector("rocket").addEventlistener("click", beforeRocket);*/
-
-/*test : let r = document.querySelector("rocket");
-  if ( r.style.display === "none"){
-    r.style.display = "block";
-  } else {
-    r.style.display = "none";
   }*/
 
-/* TEST 1:const rocketHunt = document.querySelector("rocket");
+
+
 
 const handleWallSelect = (foo) => {
     foo.classList.toggle(".board")
@@ -139,30 +111,3 @@ rocketHunt.forEach((rocket) => {
     rocketHunt.addEventListener("click", (e) => handleWallSelect(rocket))
 })
 
-/*document.querySelector().addEventlistener(‘click, ())  -> to click on the button*/
-
-//ACTION 3 - QUIZZ POP IN UP:  ->> THIS IS OPTIONAL !!!!
-
-/*classList.toggle(“Hidden”) ?   (toggle. => remove or add the class )
-
-document.querySelectorAll(‘.square’).forEach(oneSquare => {
-    if (state.square) {
-      oneSquare.style.visibility = 'visible';
-    } else {
-      oneSquare.style.visibility = 'hidden';
-    }
-  });*/
-
-//ACTION 4 - PLAYER CLICKS on ANSWER :
-
-//.document.querySelector().addEventlistener(‘click, ())  -> to click on the button
-
-//ACTION 5 - PLAYER gets SPACE LIFE (astronaut)  wahouuuuu:
-
-//ACTION 6 - GAME OVER Pops up
-
-//ACTION 7 : PLAYER can restart to play again:
-
-//ACTION 8 : ROCKET POPS UP :
-
-//ACTION 9: PLAYER gets a SPACE LIFE :

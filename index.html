@@ -27,6 +27,11 @@
 
     <div class="container">
       <!-- SPACE LIVES-->
+      <div class="instruction">
+        <p class="press">PRESS START IGNITION
+          <br> FIND WHERE THE ROCKET IS HIDDEN 
+          <br>BEHIND THE COLORED PADS</p>
+      </div>
 
       <div class="astro">
         <div>
@@ -39,7 +44,7 @@
       </div>
 
       <div>
-        <button class="start-btn">START</button>
+        <button class="start-btn">START IGNITION</button>
       </div>
 
       <!-- GRID-->
@@ -62,14 +67,12 @@
         <div class="window"></div>
       </div>
 
-      <!-- ROCKET check JS-->
-      <canvas id="canvas" width="150" height="150"></canvas>
-      <!--<button onclick="draw(0,0)">DRAW</button>-->
+      <!-- FOR ROCKET check JS-->
 
-      <!--<div class="timer"></div> -->
-
-      <!-- STARS-->
-    </div>
-    <footer></footer>
+      <!-- SOUND-->
+ 
+        <audio controls  class="audio" >
+          <source src="./sound/space-atmosphere_1.mp3" type="audio/mp3" />
+        </audio>
   </body>
 </html>

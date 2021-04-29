@@ -64,13 +64,21 @@ h3 {
   color: rgb(93, 46, 174);
 }
 
+.press{
+  color: rgb(91, 214, 214);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 80px;
+  
+}
+
 .start-btn {
-  color: rgb(80, 83, 215);
+  color: rgb(47, 50, 211);
   font-size: 20px;
   background-color: rgb(46, 234, 244);
-  border: 2px solid rgb(46, 234, 244);
-  border-radius: 5%;
-  margin: 10px;
+  border: 1px solid rgb(46, 234, 244);
+  border-radius: 6%;
+  margin: 10px 30px;
   animation: shake 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
@@ -78,16 +86,14 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 60px;
-  margin: 5px;
-  display: hidden;
+  padding-top: 70px;
 }
 
 .space-lives {
   color: rgb(91, 214, 214);
   text-align: center;
   font-size: 15px;
-  margin-top: 20%;
+  margin-top: -50px;
 }
 
 .fa-user-astronaut {
@@ -111,9 +117,8 @@ h3 {
   cursor: default;
 }
 
-.rocket {
-  position: absolute;
-  width: 5%;
+.rocket{
+  width: 100px;
 }
 
 .container {
@@ -132,22 +137,23 @@ h3 {
   background-color: rgb(80, 83, 215);
   align-items: center;
   border-radius: 5%;
+  padding-top: 3px;
 }
 
 .window.window1 {
-  animation: color-me-in1;
+  animation: color-me-in1 6s infinite;
 }
 
 .window2 {
-  animation: color-me-in2;
+  animation: color-me-in2 6s infinite;
 }
 
 .window3 {
-  animation: color-me-in3;
+  animation: color-me-in3 6s infinite;
 }
 
 .window4 {
-  animation: color-me-in3;
+  animation: color-me-in4 6s infinite;
 }
 
 /* animation shuffle colors swap*/
@@ -176,13 +182,13 @@ h3 {
   }
 
   100% {
-    background: rgb(88, 238, 255);
+    background: rgb(107, 88, 255);
   }
 }
 
 @keyframes color-me-in3 {
   0% {
-    background: rgb(172, 61, 241);
+    background: rgb(84, 11, 129);
   }
 
   40% {
@@ -200,10 +206,20 @@ h3 {
   }
 
   40% {
-    background: rgb(232, 132, 247);
+    background: rgb(150, 70, 162);
   }
 
   30% {
     background: rgb(33, 33, 169);
   }
 }
+
+.audio {
+  width: 150px;
+  height: 20px;
+  padding: 40px;
+  color:blueviolet;
+  
+}
+
+
