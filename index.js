@@ -1,15 +1,6 @@
-/*
-//ACTION 1 - BUTTONS COLOR CHANGING (buttons of the space board changing color simultaneously) :
-.querySelector(btn)
-.classList.toggle(“color”??) -> will repeat the changing color of the button on the space board ?  
- every 3sec change to a different button (player has to be faster then the color swap) 
-.AnimationEvent() timing 
-:::> DONE ON CSS */
+//DOM MANIP
 
-// console.log("Wazzup");
-//ACTION 1: CLICK ON START TO KICK OFF THE COLOR SWAPS OF THE ZEBOARD
-//test tuesday morning:
-//action 1 : Player clicks on the start btn => colors swap kicks off
+
 
 let windows = document.querySelectorAll(".window");
 let startbtn = document.querySelector(".start-btn");
@@ -21,7 +12,7 @@ let counter = 0;
 let gameEnded = false;
 
 function startGame() {
-  stopAudio();  // sound have to turn on only when player wins
+  stopAudio(); // ACTION sound have to turn on only when player wins - sound is stop at the beginning of the game
   gameEnded = false;
   windows.forEach((oneWindow) => {
     const childs = [...oneWindow.childNodes];
@@ -30,15 +21,15 @@ function startGame() {
     });
   });
   counter = 0;
-  rocketPosition = Math.floor(Math.random() * 15); // choisir un num entre 0 et 15
-  console.log(`rocket is at ${rocketPosition}`);
+  rocketPosition = Math.floor(Math.random() * 15); // math.floor/random choose a window nb btw 0 & 15
+  console.log(`rocket is at ${rocketPosition}`); // log only for the presention demo to verify where's the pour vérifié ds le log dans quelle window se situe la fusée
 }
-
+//ACTION - WINDOWS/PAD COLOR CHANGING  RANDOMLY:
 function applyCSSAnimationToCardRandomly() {
-  // pour chaque windows, choisir un num entre 1 et 4
+  // for every windows, must this function choose a nb btw 1 & 4 as there's 4 animations color-me-in(CSS)
   windows.forEach((oneWindow, index) => {
-    //  déterminer l'animation
-    const css = "window" + ((index % 4) + 1); //  appliquer classCSS à la carte courante
+  //  gets each windows one by one to be able to random the 4 animations color-me-in(CSS)
+    const css = "window" + ((index % 4) + 1); //  apply the animation color-me-in classCSS to the window
     oneWindow.classList.add(css);
   });
 }
@@ -47,6 +38,7 @@ function start(event) {
   startGame();
 }
 
+//ACTION: CLICK ON START IGNITION TO ACTIVATE THE HIDDEN ROCKET MOVING RANDOMLY
 function checkClick(event, position) {
   if (!gameEnded) {
     const currentWindow = windows[position];
@@ -61,11 +53,11 @@ function checkClick(event, position) {
       if (currentWindow.childNodes.length === 0) {
         // condition si la window est vide
         const radiation = document.createElement("img");
-        radiation.className = "radiation";
+        radiation.className = "radiation"; // création de l'élement Radiation gif tout comme la fusée
         radiation.src = "./img/radiation.gif";
         currentWindow.appendChild(radiation);
         if (counter++ >= 2) {
-          // si le player n'a pas trouvé la bonne case où se trouvait la fusée au delà de 3 essaies >=2
+          // si le player n'a pas trouvé la bonne window où se trouvait la fusée au delà de 3 essaies >=2
           alert("you failed, try again!!");
           gameEnded = true;
         }

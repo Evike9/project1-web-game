@@ -9,7 +9,7 @@ body {
 /*ROCKET HUNT GAME TITLE*/
 .txt {
   color: rgb(10, 225, 249);
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   text-transform: uppercase;
   background: #000000;
@@ -59,18 +59,24 @@ body {
   }
 }
 
-/*GAME INSTRUCTIONS*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*GAME RULES*/
 .press {
   color: rgb(91, 214, 214);
   text-align: center;
-  font-size: 10px;
+  font-size: 15px;
   margin-top: 60px;
-  border: 0.5px solid rgb(10, 225, 249);
-  border-radius: 80%;
   padding: 10px;
   width: 250px;
 }
 
+/*START IGNITION BUTTON*/
 .start-btn {
   color: rgb(47, 50, 211);
   font-size: 15px;
@@ -82,28 +88,16 @@ body {
   animation: shake 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
-.astro {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 70px;
-}
-
-.space-lives {
-  color: rgb(91, 214, 214);
-  text-align: center;
-  font-size: 12px;
-  margin-top: -60px;
-}
-
+/*ASTRONAUT ELEMENT*/
 .fa-user-astronaut {
   color: rgb(91, 214, 214);
   display: flex;
   justify-content: space-around;
-  font-size: 100%;
-  margin: 15px;
+  font-size: 200%;
+  margin: 8px;
 }
 
+/*GAME-BOARD*/
 #game-board {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
@@ -113,23 +107,7 @@ body {
   height: 350px;
 }
 
-
-
-.rocket {
-  width: 100px;
-}
-
-.radiation{
-  width:100px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/*GAME-BOARD COLORED/ANIMATED PADS/WINDOWS*/
 .window {
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
   cursor: pointer;
@@ -158,8 +136,7 @@ body {
   animation: color-me-in4 6s infinite;
 }
 
-/* ANIMATION SHUFFLE WINDOWS COLORS SWAP*/
-
+/*ANIMATION RANDOM COLORED COLORS SWAP*/
 @keyframes color-me-in1 {
   0% {
     background: rgb(80, 141, 215);
@@ -216,10 +193,21 @@ body {
   }
 }
 
+
+/*GIF ELEMENTS*/
+.rocket {
+  width: 100px;
+}
+
+.radiation {
+  width: 100px;
+}
+
+
+/*IGNITION SOUND*/
 .audio {
   width: 150px;
   height: 20px;
   padding: 90px;
   display: hidden;
 }
-
