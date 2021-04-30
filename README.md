@@ -1,4 +1,7 @@
 -ROCKET HUNT-
+Ironhack #1 project - Web Game 
+Made with HTML/CSS/JS
+
 
 Have fun looking forward to hunt the rocket!! 
 
