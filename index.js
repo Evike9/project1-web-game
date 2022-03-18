@@ -22,7 +22,7 @@ function startGame() {
   rocketPosition = Math.floor(Math.random() * 15); //math.floor/random choose a window nb btw 0 & 15 as there is 16 windows on the game-board
   console.log(`rocket is at ${rocketPosition}`); //log only for the presention demo to verify where's the pour vérifié ds le log dans quelle window se situe la fusée
 }
-//ACTION - WINDOWS/PAD COLOR CHANGING RANDOMLY:
+//ACTION - CARDS COLOR CHANGING RANDOMLY:
 function applyCSSAnimationToCardRandomly() {
   //for every windows, must this function choose a nb btw 1 & 4 as there's 4 animations color-me-in(CSS)
   windows.forEach((oneWindow, index) => {
@@ -80,3 +80,7 @@ windows.forEach((oneWindow, index) => {
 
 applyCSSAnimationToCardRandomly();
 startbtn.addEventListener("click", start);
+
+
+
+

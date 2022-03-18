@@ -12,8 +12,8 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
-  
     <!-- GAME NAME-->
     <nav>
       <div class="neon-wrapper">
@@ -22,24 +22,27 @@
         <span class="dodge"></span>
       </div>
     </nav>
- 
+
     <!-- GAME RULES-->
     <div class="container">
-      
-      <div>
-        <p class="press"><strong>RULES:</strong>
-          <br>PRESS START IGNITION BUTTON
-          <br>TO FIND OUT WHERE THE ROCKET IS HIDDEN 
-          <br>BY CLICKING ONE COLORED PAD
-          <br>YOU CAN TRY 3 TIMES ONLY
-          <br>GOOD LUCK!!</p>
+      <div class="rules-card">
+        <ol>
+          <h1>RULES :</h1>
+          <li>Press START IGNITION Button below</li>
+          <li>Click on a colored window</li>
+          <li>Find out where the rocket is hidden</li>
+          <p>
+            YOU CAN TRY 3 TIMES ONLY
+            GOOD LUCK!!!
+          </p>
+        </ol>
       </div>
 
-      <div class="astro">
+      <!-- <div class="astro">
         <div>
           <span class="fas fa-user-astronaut"></span>
         </div>
-      </div>
+      </div> -->
 
       <div>
         <button class="start-btn">START IGNITION</button>
@@ -64,12 +67,13 @@
         <div class="window"></div>
         <div class="window"></div>
       </div>
+    </div>
 
-      <!-- ROCKET & RADIATION GIF elements -> the class is created on JS & styled on CSS-->
+    <!-- ROCKET & RADIATION GIF elements -> the class is created on JS & styled on CSS-->
 
-      <!-- SOUND-->
-        <audio controls  class="audio" >
-          <source src="./sound/sound w ignition .mp3" type="audio/mp3" />
-        </audio>
+    <!-- SOUND-->
+    <div class="audio-player">
+      <audio src="./sound/sound w ignition .mp3" controls="true" class="audio-1"></audio>
+    </div>
   </body>
 </html>

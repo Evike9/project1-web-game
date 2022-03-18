@@ -1,45 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
 * {
-  font-family: monospace;
+  font-family: "space mono", monospace;
 }
 
 body {
-  background-color: #000000;
+  background-color: rgb(26, 11, 95);
 }
 
 /*ROCKET HUNT GAME TITLE*/
+
+.neon-wrapper {
+  position: relative;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  display: inline-flexbox;
+  filter: brightness(400%);
+  overflow: hidden;
+  background: rgb(67, 67, 148);
+  display: flex;
+  justify-content: center;
+  align-items: justify;
+  width: 2000px;
+}
+
 .txt {
   color: rgb(10, 225, 249);
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
   text-transform: uppercase;
-  background: #000000;
+  background: black;
+  width: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: justify;
 }
 .txt::before {
   content: "ROCKET HUNT";
   position: absolute;
   mix-blend-mode: difference;
-  filter: blur(3px);
-}
-.neon-wrapper {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-flexbox;
-  filter: brightness(300%);
-  overflow: hidden;
+  filter: blur(1px);
 }
 .gradient {
   background: linear-gradient(
     114.5793141156962deg,
     rgba(6, 227, 250, 1) 4.927083333333334%,
-    rgba(229, 151, 64, 1) 97.84374999999999%
+    rgb(137, 217, 241) 97.84374999999999%
   );
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   mix-blend-mode: multiply;
 }
 .dodge {
@@ -50,12 +61,12 @@ body {
   right: 0;
   bottom: 0;
   mix-blend-mode: color-dodge;
-  animation: dodge-area 3s linear infinite;
+  animation: dodge-area 2s linear infinite;
 }
 
 @keyframes dodge-area {
   to {
-    transform: translate(50%, 50%);
+    transform: translate(30%, 50%);
   }
 }
 
@@ -67,35 +78,57 @@ body {
 }
 
 /*GAME RULES*/
-.press {
-  color: rgb(91, 214, 214);
-  text-align: center;
-  font-size: 15px;
-  margin-top: 60px;
-  padding: 10px;
-  width: 250px;
+.rules-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: justify;
+  font-size: 13px;
+  border: solid 1px cyan;
+  border-radius: 5px;
+  color: rgb(49, 51, 170);
+  background-color: rgb(46, 234, 244);
+  width: 420px;
+  margin: -10px 0px -5px 0px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:  5px 5px 1px 0px rgb(39, 157, 204);
+}
+
+h1,
+p {
+  font-size: 1em;
+  margin-left: -26px;
+}
+
+.rules-card li {
+  text-align: justify;
+  margin: 0 40px 2px 1px;
+  width: 90%;
 }
 
 /*START IGNITION BUTTON*/
 .start-btn {
-  color: rgb(47, 50, 211);
+  color: rgb(49, 51, 170);
   font-size: 15px;
   background-color: rgb(46, 234, 244);
   border: 1px solid rgb(46, 234, 244);
-  border-radius: 90%;
-  margin: 10px 30px;
+  border-radius: 5px;
+  margin-top: 29px;
+  padding: 5px;
   width: 200px;
   animation: shake 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  box-shadow:  5px 5px 1px 0px rgb(39, 157, 204);
 }
 
 /*ASTRONAUT ELEMENT*/
-.fa-user-astronaut {
+/* .fa-user-astronaut {
   color: rgb(91, 214, 214);
   display: flex;
   justify-content: space-around;
-  font-size: 200%;
-  margin: 8px;
-}
+  font-size: 190%;
+  margin: 10px;
+} */
 
 /*GAME-BOARD*/
 #game-board {
@@ -105,19 +138,19 @@ body {
   grid-gap: 5px;
   min-width: 350px;
   height: 350px;
+  margin-top: 2em;
 }
 
-/*GAME-BOARD COLORED/ANIMATED PADS/WINDOWS*/
+/*GAME-BOARD COLORED/ANIMATED WINDOWS*/
 .window {
-  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
   cursor: pointer;
   width: 100px;
-  height: 100px;
+  height: 90px;
   border: 1px solid cyan;
   background-color: rgb(80, 83, 215);
   align-items: center;
   border-radius: 5%;
-  padding-top: 3px;
+  box-shadow:  5px 5px 1px 0px rgb(39, 157, 204);
 }
 
 .window.window1 {
@@ -193,7 +226,6 @@ body {
   }
 }
 
-
 /*GIF ELEMENTS*/
 .rocket {
   width: 100px;
@@ -203,11 +235,21 @@ body {
   width: 100px;
 }
 
-
 /*IGNITION SOUND*/
-.audio {
-  width: 150px;
-  height: 20px;
-  padding: 90px;
-  display: hidden;
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.audio-1 {
+  width: 10rem;
+  height: 1.5rem;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: rgb(46, 234, 244);
 }
